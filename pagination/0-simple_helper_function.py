@@ -1,11 +1,22 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+"""
+Module containing index_range function for pagination
+"""
 
-def index_range(page: int = 1, page_size: int = 15) ->tuple[int, int]:
-    """function to return that takes 2 int"""
-    assert page > 0 
-    assert page_size > 0
 
+def index_range(page: int, page_size: int) -> tuple[int, int]:
+    """
+    Return a tuple containing start index and end index 
+    for pagination parameters.
+    
+    Args:
+        page: Page number (1-indexed)
+        page_size: Number of items per page
+        
+    Returns:
+        Tuple of (start_index, end_index)
+    """
     start = (page - 1) * page_size
     end = page * page_size
-
+    
     return (start, end)
