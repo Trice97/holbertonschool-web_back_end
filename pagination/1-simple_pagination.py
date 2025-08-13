@@ -20,10 +20,9 @@ class Server:
     """
     DATA_FILE = "Popular_Baby_Names.csv"
 
-
     def __init__(self):
         self.__dataset = None
-
+        
     def dataset(self) -> List[List]:
         """Cached dataset
         """
@@ -45,5 +44,5 @@ class Server:
 
         if start >= len(data):
             return []
-   
+
         return data[start:end]
