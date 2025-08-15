@@ -1,2 +1,2 @@
-// script that inserts a doc named scholl with one atttribute named "name" with "Holberton School" as value
-db.school.insertOne({name: "Holberton school"})
+// my comment
+db.school.insert({name: "Holberton school"})
