@@ -1,0 +1,2 @@
+// write a script that delete the name "Holberton School" in the collection school
+db.school.deleteMany({name: "Holberton School"})
