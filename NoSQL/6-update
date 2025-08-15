@@ -1,5 +1,2 @@
-// write a function that add a new attribute in the collection school
-db.school.update(
-    {name: "Holberton School"},
-    {$set: {adress:"972 Mission street"}}
-)
+// write a script that adds a new attribute to documents in collection school
+db.school.update({name: "Holberton school"}, {$set: {address: "972 Mission street"}})
