@@ -1,4 +1,4 @@
-10-update_topics.py
+#!/usr/bin/env python3
 """Python function that changes all the topics of a school document"""
 
 
