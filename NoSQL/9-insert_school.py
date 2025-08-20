@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Module that inserts a new document in a  collection based on kwargs"""
 
 
 def insert_school(collection, name, address):
