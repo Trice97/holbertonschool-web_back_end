@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Module that inserts a new document in a  collection based on kwargs"""
+"""Module that inserts a new document in a collection based on kwargs"""
 
 
-def insert_school(collection, name, address):
-    """Insert a new school into the collection"""
-    school = {"name": name, "address": address}
-    result = collection.insert_one(school)
+def insert_school(mongo_collection, **kwargs):
+    """Insert a new document in mongo_collection based on kwargs and return the new _id"""
+    result = mongo_collection.insert_one(kwargs)
     return result.inserted_id
