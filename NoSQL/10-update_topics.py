@@ -4,7 +4,7 @@
 
 def update_topics(mongo_collection, name, topics):
     """Update the topics of a school document"""
-    mongo_collection.update_one(
+    mongo_collection.update_many(
         {"name": name},
         {'$set': {"topics": topics}},
     )
