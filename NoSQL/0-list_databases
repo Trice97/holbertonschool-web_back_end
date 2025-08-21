@@ -1,2 +1,3 @@
-# script that shows all the databases
+// script that show all the created databases
+
 show dbs
