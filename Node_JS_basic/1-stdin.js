@@ -5,17 +5,20 @@
  * and shows a closing message when input ends.
  */
 
-//that first bloc incites the user to write his name
-process.stdout.write(
-   "Welcome to Holberton School, what is your name?\n")
+// Print the initial question when the program starts
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-//the second bloc listen to what is typed by the user and store it 
-process.stdin.on("data",(data) => {
-    const name =data.toString().trim();
-    process.stdout.write(`Your name is: ${name}\n`);
-    });
+// Event listener: triggered whenever the user provides input
+process.stdin.on('data', (data) => {
+  // Convert the input buffer to string and remove extra spaces/newlines
+  const name = data.toString().trim();
 
-// this bloc display a message regarding the closure of the program
-process.stdin.on("end", () => {
-    process.stdout.write("This important software is now closing\n");
+  // Print the formatted message with the user's name
+  process.stdout.write(`Your name is: ${name}\n`);
+});
+
+// Event listener: triggered when the input stream ends (Ctrl+D or pipe finished)
+process.stdin.on('end', () => {
+  // Print the closing message before the program exits
+  process.stdout.write('This important software is now closing\n');
 });
