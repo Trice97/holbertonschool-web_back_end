@@ -1,7 +1,7 @@
-//Exercice 0 
+// Exercice 0
 
-function displayMessage(message) {;
-console.log(message);
+function displayMessage(message) {
+  console.log(message);
 }
 
-module.exports = displayMessage;
+module.export = displayMessage;
